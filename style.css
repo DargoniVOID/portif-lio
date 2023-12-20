@@ -1,0 +1,323 @@
+ *{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+
+body{
+    /*background: url(./assets/bg-mobile.jpg), lightgray 50% / cover no-repeat;
+    background-repeat:repeat;
+    background-position: top;
+    background-size: cover;
+    margin: 0%;*/
+}
+
+:root{
+    --text-color: white;
+    --border-color: rgb(97, 97, 97);
+    --border-hover: red;
+    --bg-text: rgba(255, 255, 255, 0.1);
+    --bg-text-hover: rgba(0, 0, 0, 0.623);
+    --icon-color: white;
+    --icon-switch: url(./assets/blood-bt.svg);
+    --button-bg: rgb(83, 0, 0);
+    --painel-color: rgb(0,0,0);
+    --button-hover: rgba(255, 0, 0, 0.671);
+    --z-index:-90
+}
+
+.blood{
+    --text-color: rgb(255, 255, 255);
+    --border-color:rgb(194, 0, 0);
+    --border-hover:rgb(0, 0, 0);
+    --bg-text: rgba(255, 0, 0, 0.562);
+    --bg-text-hover: rgba(117, 0, 0, 0.719);
+    --icon-color: rgb(255, 255, 255);
+    --icon-switch: url(./assets/stars.svg);
+    --button-bg: rgb(105, 105, 105);
+    --painel-color: rgb(116, 1, 1);
+    --button-hover: rgba(0, 0, 0, 0.527);
+    --z-index: -200;
+}
+
+
+.bg_video{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    z-index: var(--z-index);
+    background: center;
+    background: cover;
+}
+
+
+#painel {
+    right: 50%;
+    transform: translateX(50%);
+    display: inherit;
+    margin: auto;
+    position: absolute;
+    width: 360px;
+    height: 720px;
+   background-color: var(--painel-color);
+    z-index: -1;
+    border-radius: 2%;
+}
+
+body *{
+    font-family: 'DotGothic16', sans-serif;
+    color: var(--text-color);
+    font-style:inherit;
+    background: var(--background-url);
+    
+
+}
+
+.bg_vdblood {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    z-index: -95;
+    background: center;
+    background: cover;
+}
+
+#container {
+   
+    width: 360px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+}
+
+/* perfil */
+
+#profile {
+    padding: 24px;
+    text-align: center;
+}
+
+#profile img {
+    border-radius: 100%;
+    width: 122px;
+    display: flex;
+    margin: auto;
+}
+
+#profile p {
+    color: var(--icon-color);
+    margin-top: 18px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* switch botão de troca de modo*/
+
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button{
+    display: flex;
+    height: 32px;
+    width: 32px;
+    background: rgb(255, 255, 255) var(--icon-switch) no-repeat center;
+    border: 0; 
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: slide-out 0.4s;
+}
+
+#switch button:hover {
+    outline: 8px solid var(--button-hover);
+}
+
+.blood #switch button{
+    animation: slide-in 0.4s forwards;
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background-color: var(--button-bg) ;
+    border: 1px solid  var(--border-hover);
+    border-radius: 9999px;
+}
+
+/* botões sociais */ 
+
+#container1 ul {
+    width: 100%;
+    margin: 24px auto auto;
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   gap: 24px;  
+}
+
+ul li a {
+    border: solid 1px ;
+    border-color:var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: large;
+    height: 52px;
+    background: var(--bg-text);
+    text-decoration: none;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: all 0.2s
+}
+
+ul li a:hover{
+    border-color: var(--border-hover);
+    background-color: var(--bg-text-hover);
+}
+
+/*social links*/
+
+#social{
+    display: flex;
+    gap: 25px;
+    padding: 24px 0;
+    justify-content: center;
+    font-size: 33px;
+}
+
+#social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border: 1px solid;
+    border-color: #ffffff00;
+    transition: 0.2s;
+    border-radius: 100%;
+}
+
+#social a:hover{
+ background-color: var(--bg-text);
+ padding: 16px;
+ border-radius: 100%;
+ border-color: var(--border-color);
+}
+
+
+
+/* roda-pé */
+
+footer{
+    text-align: center;
+    padding: 24px;
+    color: var(--icon-color);
+}
+
+ion-icon {
+    color: var(--icon-color);
+  }
+
+
+  /* estilo da pagina sobre */ 
+
+
+  #painelsobre {
+
+    display: inherit;
+    margin:  24px auto auto 24px;
+    position: absolute;
+    width: 1200px;
+    height: 720px;
+   background-color: rgba(0, 0, 0, 0.699);
+    z-index: -1;
+    border-radius: 2%;
+}
+
+#bthome {
+    display: flex;
+    font-size: x-large;   
+    padding: 12px;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+
+}
+
+#painelsobre p {
+    text-align: justify;
+    font-size: larger;    
+    text-align:center;
+    columns: 200px 2;
+    column-gap: 30px;
+    padding: 25px;
+}
+
+#painelsobre h2{
+    text-align: center;
+    column-span: all;
+    display: block;
+}
+
+
+.games li{
+    display: inline-block;
+    padding: 15px;
+    text-align: center;
+}
+
+.games li a {
+    display: inline-block;
+}
+
+.gamesimg {
+    display: flex;
+     max-width: 195px;
+     height: 260px;
+}
+
+
+
+
+/* animação */
+
+@keyframes slide-in {
+    from{
+        left: 0;
+    }
+
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+    From{
+        left: 50%;
+    }
+
+    to{
+        left: 0;
+    }
+}
+

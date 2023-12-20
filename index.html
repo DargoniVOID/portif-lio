@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="root">
+    <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> V O I D </title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div id="video_background">
+        <video autoplay muted loop class="bg_video">
+            <source src="./assets/gif.background.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <div id="video_blood">
+        <video autoplay muted loop class="bg_vdblood">
+            <source src="./assets/gif.blood.mp4" type= "video/mp4">
+        </video>
+    </div>
+     
+    <div id="painel">
+    </div>
+    <div id="container">
+    <div id="profile">
+        <img src="./assets/profile-img.png" alt="">
+        <p>@dargoni.zip</p>
+    </div>
+        
+    <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+    </div>
+
+        <div id="container1">
+            <div id="list">
+                <ul>
+                    <li>
+                        <a href="./sobre.html">Sobre</a> 
+                    </li>
+                    <li>
+                        <a href="#">Discord</a>
+                    </li>
+                    <li>
+                        <a href="#">Youtube</a>
+                    </li>
+                    <li>
+                        <a href="#">Instagran</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="social">
+            <a href="https://store.steampowered.com/?l=portuguese"  target="_blank">
+            <ion-icon name="logo-steam"></ion-icon>
+            </a> 
+            <a href="https://discord.com/" target="_blank">
+            <ion-icon name="logo-discord"></ion-icon>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank">
+            <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+        </div>
+        <div>
+            <footer>
+                Feito Por V O I D   <ion-icon name="planet-outline"></ion-icon>
+            </footer>
+        </div>
+
+</div>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
